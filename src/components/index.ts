@@ -1,4 +1,9 @@
-import Button from "./Button";
+import MuiButton from "./Button/Button";
+import NavBar from "./NavBar/NavBar";
+import Wrapper from "./Wrapper/Wrapper";
+
 export {
-  Button,
+  MuiButton,
+  NavBar,
+  Wrapper,
 }
