@@ -1,13 +1,22 @@
 import './App.css'
+import { NavLinks } from './constants'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { MenuPage } from './pages'
 
-function App() {
+
+const App: React.FC = () => {
 
   return (
-    <>
-      <MenuPage></MenuPage>
-    </>
+    <HashRouter basename='/'>
+      <Routes>
+        <Route path="/" Component={MenuPage}></Route>
+        <Route path="/" Component={MenuPage}></Route>
+        <Route path="/" Component={MenuPage}></Route>
+        <Route path="/" Component={MenuPage}></Route>
+        <Route path="/" Component={MenuPage}></Route>
+      </Routes >
+    </HashRouter >
   )
 }
 
-export default App
+export default App;
