@@ -1,7 +1,7 @@
-import { Drawer, Button, Box, List, ListItemIcon, ListItem, ListItemButton, ListItemText, Divider } from "@mui/material";
+import { Drawer, Box, List, ListItemIcon, ListItem, ListItemButton, ListItemText, Divider } from "@mui/material";
 import Wrapper from "../Wrapper/Wrapper";
 import React from "react";
-import { NavLinks } from "../../constants";
+import { Links, NavLinks } from "../../constants";
 import MuiButton from "../Button/Button";
 const NavBar: React.FC = () => {
 
@@ -16,8 +16,8 @@ const NavBar: React.FC = () => {
       <List>
         {NavLinks.map((text, index) => (
           <>
-            <ListItem key={index}>
-              <ListItemButton>
+            <ListItem key={index} >
+              <ListItemButton component="a" href={Links[index]} >
                 <ListItemIcon>
 
                 </ListItemIcon>
