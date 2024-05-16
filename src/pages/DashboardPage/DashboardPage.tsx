@@ -1,10 +1,10 @@
-import { NavBar, Wrapper } from "../../components";
+import { NavBar } from "../../components";
 
 const DashboardPage: React.FC = () => {
   return (
-    <Wrapper>
+    <>
       <NavBar></NavBar>
-    </Wrapper>
+    </>
   );
 }
 
