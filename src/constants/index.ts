@@ -1,8 +1,16 @@
-export const NavLinks = [
+export const NavLinks: string[] = [
   'Menu',
   'Dashboard',
   'Cedi',
   'Prendi',
   'Utenti',
+]
+
+export const Links: string[] = [
+  '/menu',
+  '/dashboard',
+  '/cedi',
+  '/prendi',
+  '/utenti',
 ]
 
