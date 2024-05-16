@@ -8,7 +8,7 @@ import React from "react";
 import { Links, NavLinks } from "../../constants";
 import { BookMenu } from "../../svg";
 import MenuButton from "../Button/MenuButton";
-import { MenuButtonWrapper } from "../Wrapper/style";
+import { MenuButtonWrapper, ImageDrawerWrapper } from "../Wrapper/style";
 const NavBar: React.FC = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -50,8 +50,9 @@ const NavBar: React.FC = () => {
           </>
         ))}
       </List>
-
-      <BookMenu sx={{ width: "15rem", height: "15rem", opacity: "25%" }} />
+      <ImageDrawerWrapper>
+        <BookMenu sx={{ width: "15rem", height: "15rem", opacity: "25%" }} />
+      </ImageDrawerWrapper>
     </Box>
   );
 
