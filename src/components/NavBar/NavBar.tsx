@@ -56,7 +56,7 @@ const NavBar: React.FC = () => {
   );
 
   return (
-    <Wrapper>
+    <Wrapper style={{}}>
       <MuiButton style={{}} onClick={toggleDrawer(true)} Text="Menu" ></MuiButton>
       <Drawer open={open} onClose={toggleDrawer(false)}>{DrawerList}</Drawer>
     </Wrapper >

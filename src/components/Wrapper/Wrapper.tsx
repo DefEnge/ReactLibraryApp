@@ -1,11 +1,15 @@
+import { Box } from "@mui/material";
 
 type WrapperProps = {
-  children: React.ReactNode
+  children: React.ReactNode;
+  style?: {};
 }
 
-const Wrapper: React.FC<WrapperProps> = ({ children }) => {
+const Wrapper: React.FC<WrapperProps> = ({ children, style }) => {
   return (
-    <div>{children}</div>
+    <Box sx={style}>
+      {children}
+    </Box>
   );
 }
 export default Wrapper
