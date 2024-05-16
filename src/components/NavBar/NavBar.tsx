@@ -34,7 +34,7 @@ const NavBar: React.FC = () => {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250, }} role="presentation" onClick={toggleDrawer(false)} >
+    <Box sx={{ width: 250, display: "flex", alignItems: "flex-start", flexDirection: "column" }} role="presentation" onClick={toggleDrawer(false)} >
       <List>
         {NavLinks.map((text, index) => (
           <>
@@ -49,9 +49,9 @@ const NavBar: React.FC = () => {
             <Divider component="li" />
           </>
         ))}
-
-        <BookMenu sx={{ width: "15rem", height: "15rem", opacity: "25%", marginTop: "44rem" }} />
       </List>
+
+      <BookMenu sx={{ width: "15rem", height: "15rem", opacity: "25%" }} />
     </Box>
   );
 
