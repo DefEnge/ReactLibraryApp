@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 
 type MuiButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
   Text: string;
   style?: {};
 

@@ -1,12 +1,11 @@
-import { Wrapper, NavBar, MuiButton } from "../../components";
+import { NavBar } from "../../components";
 
 
 const MenuPage: React.FC = () => {
   return (
-    <Wrapper>
+    <>
       <NavBar />
-    </Wrapper>
-
+    </>
   );
 
 }

@@ -4,11 +4,11 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PeopleIcon from '@mui/icons-material/People';
-import Wrapper from "../Wrapper/Wrapper";
 import React from "react";
 import { Links, NavLinks } from "../../constants";
 import { BookMenu } from "../../svg";
-import MuiButton from "../Button/Button";
+import MenuButton from "../Button/MenuButton";
+import { MenuButtonWrapper } from "../Wrapper/style";
 const NavBar: React.FC = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -34,7 +34,7 @@ const NavBar: React.FC = () => {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250, display: "flex", alignItems: "flex-start", flexDirection: "column" }} role="presentation" onClick={toggleDrawer(false)} >
+    <Box sx={{ width: 250, display: "block" }} role="presentation" onClick={toggleDrawer(false)} >
       <List>
         {NavLinks.map((text, index) => (
           <>
@@ -56,10 +56,10 @@ const NavBar: React.FC = () => {
   );
 
   return (
-    <Wrapper style={{}}>
-      <MuiButton style={{}} onClick={toggleDrawer(true)} Text="Menu" ></MuiButton>
+    <MenuButtonWrapper>
+      <MenuButton onClick={toggleDrawer(true)} ></MenuButton>
       <Drawer open={open} onClose={toggleDrawer(false)}>{DrawerList}</Drawer>
-    </Wrapper >
+    </MenuButtonWrapper>
 
   );
 }
