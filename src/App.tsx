@@ -1,22 +1,22 @@
 import './App.css'
 import { Links } from './constants'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import { MenuPage, DashboardPage } from './pages'
 
 
 const App: React.FC = () => {
 
   return (
-    <HashRouter basename='/'>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" Component={MenuPage}></Route>
-        <Route path={Links[0]} Component={MenuPage}></Route>
-        <Route path={Links[1]} Component={DashboardPage}></Route>
-        <Route path={Links[2]} Component={MenuPage}></Route>
-        <Route path={Links[3]} Component={MenuPage}></Route>
-        <Route path={Links[4]} Component={MenuPage}></Route>
-      </Routes >
-    </HashRouter >
+        <Route path="/" element={<MenuPage />}></Route>
+        <Route path={Links[0]} element={<MenuPage />}></Route>
+        <Route path={Links[1]} element={<DashboardPage />}></Route>
+        <Route path={Links[2]} element={<MenuPage />}></Route>
+        <Route path={Links[3]} element={<MenuPage />}></Route>
+        <Route path={Links[4]} element={<MenuPage />}></Route>
+      </Routes>
+    </BrowserRouter >
   )
 }
 

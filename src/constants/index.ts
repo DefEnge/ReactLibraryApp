@@ -7,10 +7,10 @@ export const NavLinks: string[] = [
 ]
 
 export const Links: string[] = [
-  '/menu',
-  '/dashboard',
-  '/cedi',
-  '/prendi',
-  '/utenti',
+  'menu',
+  'dashboard',
+  'cedi',
+  'prendi',
+  'utenti',
 ]
 
