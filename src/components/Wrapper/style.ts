@@ -29,4 +29,11 @@ export const ImageDrawerWrapper = styled('div')({
   textAlign: "center",
 });
 
+export const TableWrapper = styled('div')({
+  display: "flex",
+  flexDirection: "column",
+  background: "white",
+  alignItems: "center",
+  textAlign: "center",
+});
 
