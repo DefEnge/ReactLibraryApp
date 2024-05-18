@@ -4,7 +4,6 @@ const DashboardPage: React.FC = () => {
   return (
     <>
       <NavBar></NavBar>
-      <h1>test</h1>
     </>
   );
 }
