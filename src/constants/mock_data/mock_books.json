@@ -1,20 +1,122 @@
-[{"book_title":"Ms","author":"Glynda McGenn","genre":"Non-Fiction","taken":false,"available_copies":805},
-{"book_title":"Rev","author":"Haleigh Oglesbee","genre":"Romance","taken":true,"available_copies":87},
-{"book_title":"Honorable","author":"Francklin Sarjent","genre":"Science Fiction","taken":false,"available_copies":44},
-{"book_title":"Mr","author":"Uta Wager","genre":"Non-Fiction","taken":false,"available_copies":421},
-{"book_title":"Honorable","author":"Jane Stockell","genre":"Fiction","taken":false,"available_copies":163},
-{"book_title":"Ms","author":"Tallie Pydcock","genre":"Mystery","taken":false,"available_copies":289},
-{"book_title":"Ms","author":"Odelle Toquet","genre":"Mystery","taken":true,"available_copies":941},
-{"book_title":"Mrs","author":"Justis Heighton","genre":"Science Fiction","taken":false,"available_copies":81},
-{"book_title":"Rev","author":"Marybeth Gorry","genre":"Science Fiction","taken":true,"available_copies":559},
-{"book_title":"Ms","author":"Didi Matchell","genre":"Science Fiction","taken":false,"available_copies":658},
-{"book_title":"Honorable","author":"Brianne Farres","genre":"Mystery","taken":false,"available_copies":249},
-{"book_title":"Dr","author":"Zoe Killock","genre":"Fiction","taken":true,"available_copies":318},
-{"book_title":"Honorable","author":"Kyrstin Schrader","genre":"Fiction","taken":true,"available_copies":538},
-{"book_title":"Dr","author":"Terry Roderham","genre":"Romance","taken":false,"available_copies":338},
-{"book_title":"Ms","author":"Belia Lorant","genre":"Fiction","taken":true,"available_copies":389},
-{"book_title":"Dr","author":"Noe Hargreaves","genre":"Romance","taken":true,"available_copies":602},
-{"book_title":"Ms","author":"Anthe Kollach","genre":"Fiction","taken":true,"available_copies":363},
-{"book_title":"Ms","author":"Konstantin Leonarde","genre":"Fiction","taken":false,"available_copies":519},
-{"book_title":"Honorable","author":"Angelina Brundall","genre":"Mystery","taken":false,"available_copies":805},
-{"book_title":"Mr","author":"Berta Stearn","genre":"Non-Fiction","taken":true,"available_copies":557}]
+[
+  {
+    "book_title": "Miss Julie",
+    "author": "Milty Seers",
+    "genre": "Non-Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "Thin Ice",
+    "author": "Denny Jezard",
+    "genre": "Science Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "Henry & June",
+    "author": "Nicholle Dakhno",
+    "genre": "Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Most Dangerous Game, The",
+    "author": "Zaneta Phillins",
+    "genre": "Science Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "High Strung",
+    "author": "Fanchette Antonat",
+    "genre": "Mystery",
+    "taken": false
+  },
+  {
+    "book_title": "Amateur, The",
+    "author": "Marnie Lynett",
+    "genre": "Non-Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "Unconquered",
+    "author": "Willow Hains",
+    "genre": "Romance",
+    "taken": true
+  },
+  {
+    "book_title": "Hunting Elephants",
+    "author": "Patric Oulner",
+    "genre": "Science Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Finisterrae",
+    "author": "Izzy Olander",
+    "genre": "Mystery",
+    "taken": false
+  },
+  {
+    "book_title": "Just Pals",
+    "author": "Lois Mattaus",
+    "genre": "Non-Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "The Pumaman",
+    "author": "Kirby Hriinchenko",
+    "genre": "Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Enigma of Kaspar Hauser",
+    "author": "Kit Trendle",
+    "genre": "Mystery",
+    "taken": false
+  },
+  {
+    "book_title": "Tell Me Something",
+    "author": "Karly Glanester",
+    "genre": "Mystery",
+    "taken": false
+  },
+  {
+    "book_title": "Mask of Fu Manchu, The",
+    "author": "Arie Stangoe",
+    "genre": "Non-Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Seducing Mr. Perfect",
+    "author": "My Newitt",
+    "genre": "Non-Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Sitcom",
+    "author": "Ariana Lowndesbrough",
+    "genre": "Non-Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Recipe for Love",
+    "author": "Hi Cranmor",
+    "genre": "Non-Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Faces of Death 6",
+    "author": "Kalvin Delgua",
+    "genre": "Science Fiction",
+    "taken": true
+  },
+  {
+    "book_title": "Diên Biên Phú",
+    "author": "Sheila-kathryn Brotherton",
+    "genre": "Science Fiction",
+    "taken": false
+  },
+  {
+    "book_title": "Bloodsucking Pharaohs in Pittsburgh",
+    "author": "Mohammed Knobell",
+    "genre": "Fiction",
+    "taken": false
+  }
+]
