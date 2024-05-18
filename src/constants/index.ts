@@ -14,3 +14,10 @@ export const Links: string[] = [
   'utenti',
 ]
 
+export const DashBoardTable: string[] = [
+  'Book',
+  'Author',
+  'Genre',
+  'Taken',
+
+]
