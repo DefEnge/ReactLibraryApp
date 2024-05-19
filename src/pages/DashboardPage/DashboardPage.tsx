@@ -1,4 +1,4 @@
-import { DashboardTable, Table, NavBar } from "../../components";
+import { DashboardTable, NavBar } from "../../components";
 import { DashBoardTable } from "../../constants";
 import { default as data } from "../../constants/mock_data/mock_books.json";
 
