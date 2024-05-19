@@ -1,5 +1,5 @@
 import React from "react";
-import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button, TextField, } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from "@mui/material";
 export type PopUpDialogProps = {
   handleClose: () => void;
   open: boolean;
@@ -8,7 +8,7 @@ export type PopUpDialogProps = {
 
 
 
-const PopUpDialog: React.FC<PopUpDialogProps> = ({ handleClose, open }) => {
+const PopUpDialog: React.FC<PopUpDialogProps> = ({ handleClose, open, index }) => {
 
   return (
     <React.Fragment>
@@ -19,10 +19,7 @@ const PopUpDialog: React.FC<PopUpDialogProps> = ({ handleClose, open }) => {
           component: 'form',
           onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
             event.preventDefault();
-            const formData = new FormData(event.currentTarget);
-            const formJson = Object.fromEntries((formData as any).entries());
-            const email = formJson.email;
-            console.log(email);
+            console.log(index);
             handleClose();
           },
         }}
