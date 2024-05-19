@@ -29,7 +29,7 @@ export const ImageDrawerWrapper = styled('div')({
   textAlign: "center",
 });
 
-export const TableWrapper = styled('div')({
+export const ContentWrapper = styled('div')({
   display: "flex",
   flexDirection: "column",
   background: "white",

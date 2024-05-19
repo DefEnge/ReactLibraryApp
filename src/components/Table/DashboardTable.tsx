@@ -1,6 +1,6 @@
 import React from "react";
 import { TableContainer, Table, TableRow, TableHead, TableCell, TableBody, } from "@mui/material";
-import { TableWrapper } from "../Wrapper/style";
+import { ContentWrapper } from "../Wrapper/style";
 import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
 import MuiButton from "../Button/Button";
@@ -54,7 +54,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
 
 
   return (
-    <TableWrapper>
+    <ContentWrapper>
       <TableContainer >
         <Table sx={{ minWidth: 650 }} >
           <TableHead>
@@ -88,7 +88,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
       <PopUpDialog handleClose={handleClose} open={open} index={id}></PopUpDialog>
       <PopUpCancel handleClose={handleDeleteClose} open={opendelete} ></PopUpCancel>
 
-    </TableWrapper >
+    </ContentWrapper >
 
   );
 }
