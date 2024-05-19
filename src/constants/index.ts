@@ -18,6 +18,6 @@ export const DashBoardTable: string[] = [
   'Book',
   'Author',
   'Genre',
-  'Taken',
+  'Available',
 
 ]
