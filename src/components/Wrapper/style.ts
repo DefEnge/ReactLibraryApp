@@ -37,3 +37,10 @@ export const ContentWrapper = styled('div')({
   textAlign: "center",
 });
 
+export const FormWrapper = styled('div')({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "space-around",
+  background: "",
+});
