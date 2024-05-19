@@ -1,9 +1,11 @@
 import React from "react";
 import { TableContainer, Table, TableRow, TableHead, TableCell, TableBody, } from "@mui/material";
 import { TableWrapper } from "../Wrapper/style";
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
 import MuiButton from "../Button/Button";
 import PopUpDialog from "../Dialog/PopUpDialog";
-
+import PopUpCancel from "../Dialog/PopupCancel";
 type MuiTableProp = {
   FirstRow: string[],
   data: any, //TODO find the right type
@@ -24,6 +26,33 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
     setOpen(false)
   };
 
+  const [opendelete, setOpendelete] = React.useState(false);
+
+  const handleDeleteOpen = () => {
+    setOpendelete(true)
+  };
+
+  const handleDeleteClose = () => {
+    setOpendelete(false)
+  };
+
+
+
+  const IconSelector: React.ElementType = (taken: boolean) => {
+    if (taken == true) {
+      return <CloseIcon />;
+    } else {
+      return <CheckIcon />;
+    }
+  };
+
+  const IdParser = (index: number) => {
+    id = index;
+  };
+
+  let id: number = 0;
+
+
   return (
     <TableWrapper>
       <TableContainer >
@@ -32,7 +61,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
             <TableRow>
               {FirstRow.map((text, index) => (
                 <>
-                  <TableCell align={index == 0 ? "" : "right"}>{text}</TableCell >
+                  <TableCell align={index == 0 ? '' : 'right'}>{text}</TableCell >
                 </>
               ))}
             </TableRow>
@@ -48,15 +77,16 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
                 </TableCell>
                 <TableCell align="right">{row.author}</TableCell>
                 <TableCell align="right">{row.genre}</TableCell>
-                <TableCell align="right">{row.taken}</TableCell>
-                <MuiButton onClick={handleClickOpen} Text="Dettaglio"></MuiButton>
-                <MuiButton Text="Elimina Libro"></MuiButton>
+                <TableCell align="right">{IconSelector(row.taken)}</TableCell>
+                <MuiButton onClick={() => { IdParser(index); handleClickOpen() }} Text="Dettaglio"></MuiButton>
+                <MuiButton onClick={handleDeleteOpen} Text="Elimina Libro"></MuiButton>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      <PopUpDialog handleClose={handleClose} open={open} ></PopUpDialog>
+      <PopUpDialog handleClose={handleClose} open={open} index={id}></PopUpDialog>
+      <PopUpCancel handleClose={handleDeleteClose} open={opendelete} ></PopUpCancel>
 
     </TableWrapper >
 
