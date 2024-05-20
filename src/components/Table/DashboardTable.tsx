@@ -8,7 +8,7 @@ import PopUpDialog from "../Dialog/PopUpDialog";
 import PopUpCancel from "../Dialog/PopupCancel";
 type MuiTableProp = {
   FirstRow: string[],
-  data: [], //TODO find the right type
+  data: {}[],
 }
 
 

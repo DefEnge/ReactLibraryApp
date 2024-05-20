@@ -22,3 +22,9 @@ export const DashBoardTable: string[] = [
 
 ]
 
+export const UserTable: string[] = [
+  'id',
+  'First name',
+  'Last name',
+  'email'
+]

@@ -1,4 +1,4 @@
-import { NavBar, MuiButton } from "../../components";
+import { NavBar } from "../../components";
 import { ContentWrapper, FormWrapper } from "../../components/Wrapper/style";
 import { Button, Link, TextField, Typography } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
