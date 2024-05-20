@@ -1,7 +1,7 @@
 import './App.css'
 import { Links } from './constants'
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
-import { MenuPage, DashboardPage, CediPage } from './pages'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { MenuPage, DashboardPage, CediPage, UtentiPage } from './pages'
 const App: React.FC = () => {
 
   return (
@@ -12,7 +12,7 @@ const App: React.FC = () => {
         <Route path={Links[1]} element={<DashboardPage />}></Route>
         <Route path={Links[2]} element={<CediPage />}></Route>
         <Route path={Links[3]} element={<MenuPage />}></Route>
-        <Route path={Links[4]} element={<MenuPage />}></Route>
+        <Route path={Links[4]} element={<UtentiPage />}></Route>
       </Routes>
     </BrowserRouter >
   )

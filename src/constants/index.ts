@@ -21,3 +21,4 @@ export const DashBoardTable: string[] = [
   'Available',
 
 ]
+

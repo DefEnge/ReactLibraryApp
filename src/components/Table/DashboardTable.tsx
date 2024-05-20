@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TableContainer, Table, TableRow, TableHead, TableCell, TableBody, } from "@mui/material";
 import { ContentWrapper } from "../Wrapper/style";
 import CloseIcon from '@mui/icons-material/Close';
@@ -8,15 +8,16 @@ import PopUpDialog from "../Dialog/PopUpDialog";
 import PopUpCancel from "../Dialog/PopupCancel";
 type MuiTableProp = {
   FirstRow: string[],
-  data: any, //TODO find the right type
+  data: [], //TODO find the right type
 }
+
 
 
 
 
 const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true)
@@ -26,7 +27,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
     setOpen(false)
   };
 
-  const [opendelete, setOpendelete] = React.useState(false);
+  const [opendelete, setOpendelete] = useState(false);
 
   const handleDeleteOpen = () => {
     setOpendelete(true)
@@ -46,11 +47,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
     }
   };
 
-  const IdParser = (index: number) => {
-    id = index;
-  };
-
-  let id: number = 0;
+  const [row_data, setRowData] = useState([]);
 
 
   return (
@@ -61,31 +58,31 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
             <TableRow>
               {FirstRow.map((text, index) => (
                 <>
-                  <TableCell align={index == 0 ? '' : 'right'}>{text}</TableCell >
+                  <TableCell align={index === 0 ? "left" : "right"}>{text}</TableCell >
                 </>
               ))}
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row, index) => (
+            {data.map(({ book_title, author, genre, taken }) => (
               <TableRow
-                key={row.book_title}
+                key={book_title}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.book_title}
+                  {book_title}
                 </TableCell>
-                <TableCell align="right">{row.author}</TableCell>
-                <TableCell align="right">{row.genre}</TableCell>
-                <TableCell align="right">{IconSelector(row.taken)}</TableCell>
-                <MuiButton onClick={() => { IdParser(index); handleClickOpen() }} Text="Dettaglio"></MuiButton>
+                <TableCell align="right">{author}</TableCell>
+                <TableCell align="right">{genre}</TableCell>
+                <TableCell align="right">{IconSelector(taken)}</TableCell>
+                <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} Text="Dettaglio"></MuiButton>
                 <MuiButton onClick={handleDeleteOpen} Text="Elimina Libro"></MuiButton>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      <PopUpDialog handleClose={handleClose} open={open} index={id}></PopUpDialog>
+      <PopUpDialog handleClose={handleClose} open={open} data={row_data}></PopUpDialog>
       <PopUpCancel handleClose={handleDeleteClose} open={opendelete} ></PopUpCancel>
 
     </ContentWrapper >
