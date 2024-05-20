@@ -14,13 +14,6 @@ const PopUpCancel: React.FC<PopUpCancelProps> = ({ handleClose, open }) => {
       <Dialog
         open={open}
         onClose={handleClose}
-        PaperProps={{
-          component: 'form',
-          onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-            event.preventDefault();
-            handleClose();
-          },
-        }}
       >
         <DialogTitle>Elimina il libro</DialogTitle>
         <DialogContent>
