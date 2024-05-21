@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { TableContainer, Table, TableRow, TableHead, TableCell, TableBody, } from "@mui/material";
-import { ContentWrapper } from "../Wrapper/style";
+import { TableContainer, Table, TableRow, TableHead, TableCell, TableBody, Button, Box } from "@mui/material";
+import { ContentWrapper, DashboardButtonWrapper } from "../Wrapper/style";
 import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
-import MuiButton from "../Button/Button";
 import PopUpDialog from "../Dialog/PopUpDialog";
 import PopUpCancel from "../Dialog/PopupCancel";
 type MuiTableProp = {
@@ -52,10 +51,10 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
 
   return (
     <ContentWrapper>
-      <TableContainer >
+      <TableContainer  >
         <Table sx={{ minWidth: 650 }} >
-          <TableHead>
-            <TableRow>
+          <TableHead sx={{ background: "lightblue" }}>
+            <TableRow >
               {FirstRow.map((text, index) => (
                 <>
                   <TableCell align={index === 0 ? "left" : "right"}>{text}</TableCell >
@@ -63,7 +62,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
               ))}
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody sx={{ background: "white" }}>
             {data.map(({ book_title, author, genre, taken }) => (
               <TableRow
                 key={book_title}
@@ -75,8 +74,13 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
                 <TableCell align="right">{author}</TableCell>
                 <TableCell align="right">{genre}</TableCell>
                 <TableCell align="right">{IconSelector(taken)}</TableCell>
-                <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} Text="Dettaglio"></MuiButton>
-                <MuiButton onClick={handleDeleteOpen} Text="Elimina Libro"></MuiButton>
+                <DashboardButtonWrapper>
+                  <TableCell>
+                    <Button variant="contained" onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} >Dettaglio</Button>
+                    <Button onClick={handleDeleteOpen} > Elimina Libro</Button>
+                  </TableCell>
+
+                </DashboardButtonWrapper>
               </TableRow>
             ))}
           </TableBody>
