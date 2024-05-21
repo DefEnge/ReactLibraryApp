@@ -50,5 +50,4 @@ export const DashboardButtonWrapper = styled('div')({
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingLeft: "0.5rem"
 })

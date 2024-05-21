@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
 import PopUpDialog from "../Dialog/PopUpDialog";
 import PopUpCancel from "../Dialog/PopupCancel";
+import MuiButton from "../Button/Button";
 type MuiTableProp = {
   FirstRow: string[],
   data: {}[],
@@ -76,10 +77,9 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
                 <TableCell align="right">{IconSelector(taken)}</TableCell>
                 <DashboardButtonWrapper>
                   <TableCell>
-                    <Button variant="contained" onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} >Dettaglio</Button>
-                    <Button onClick={handleDeleteOpen} > Elimina Libro</Button>
+                    <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} Text="Dettaglio" ></MuiButton>
+                    <MuiButton onClick={handleDeleteOpen} Text="Elimina Libro" ></MuiButton>
                   </TableCell>
-
                 </DashboardButtonWrapper>
               </TableRow>
             ))}
