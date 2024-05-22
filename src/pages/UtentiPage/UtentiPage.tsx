@@ -43,8 +43,8 @@ const UtentiPage: React.FC = () => {
   return (
     <>
       <NavBar />
-      <Box>
-        <DataGrid sx={{ background: "white" }} rows={data} columns={UserTable} initialState={{
+      <Box sx={{ background: "white" }}>
+        <DataGrid rows={data} columns={UserTable} initialState={{
           pagination: {
             paginationModel: {
               pageSize: 10,
@@ -52,13 +52,13 @@ const UtentiPage: React.FC = () => {
           },
         }}
           pageSizeOptions={[10]} />
-      </Box>
 
-      <Box>
-        <Button onClick={handleClickOpen}>add user</Button>
+        <Box sx={{ display: "flex", flexDirection: "column", background: "white", alignItems: "center", justifyContent: "center", height: 75 }}>
+          <Button variant="contained" onClick={handleClickOpen}>add user</Button>
+        </Box>
+      </Box >
 
-        <PopUpUserAddDialog handleClose={handleClose} open={open} ></PopUpUserAddDialog>
-      </Box>
+      <PopUpUserAddDialog handleClose={handleClose} open={open} ></PopUpUserAddDialog>
 
     </>
 
