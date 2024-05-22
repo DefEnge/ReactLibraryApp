@@ -8,13 +8,11 @@ export type PopUpCancelProps = {
 
 
 
-const PopUpCancel: React.FC<PopUpCancelProps> = ({ handleClose, open }) => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log(
-      data
-    );
+const PopUpCancel: React.FC<PopUpCancelProps> = ({ handleClose, open, data }) => {
+  const handleSubmit = (data: string[]) => {
+    data.forEach(element => {
+      console.log(element)
+    });
   };
 
 
@@ -25,7 +23,7 @@ const PopUpCancel: React.FC<PopUpCancelProps> = ({ handleClose, open }) => {
         open={open}
         onClose={handleClose}
       >
-        <Box component="form" onSubmit={handleSubmit}>
+        <Box component="form">
           <DialogTitle>Elimina il libro</DialogTitle>
           <DialogContent>
             <DialogContentText align="left">
@@ -34,7 +32,7 @@ const PopUpCancel: React.FC<PopUpCancelProps> = ({ handleClose, open }) => {
           </DialogContent>
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
-            <Button type="submit">Elimina</Button>
+            <Button type="submit" onClick={handleSubmit(data)} >Elimina</Button>
           </DialogActions>
         </Box>
       </Dialog>

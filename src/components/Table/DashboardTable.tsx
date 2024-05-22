@@ -64,7 +64,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
             </TableRow>
           </TableHead>
           <TableBody sx={{ background: "white" }}>
-            {data.map(({ book_title, author, genre, taken }) => (
+            {data.map(({ book_title, author, genre, taken }, index) => (
               <TableRow
                 key={book_title}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -78,7 +78,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
                 <DashboardButtonWrapper>
                   <TableCell>
                     <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} Text="Dettaglio" ></MuiButton>
-                    <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleDeleteOpen() }} Text="Elimina Libro" ></MuiButton>
+                    <MuiButton onClick={() => { setRowData([book_title, author, genre, index]); handleDeleteOpen() }} Text="Elimina Libro" ></MuiButton>
                   </TableCell>
                 </DashboardButtonWrapper>
               </TableRow>
@@ -87,7 +87,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
         </Table>
       </TableContainer>
       <PopUpDialog handleClose={handleClose} open={open} data={row_data}></PopUpDialog>
-      <PopUpCancel handleClose={handleDeleteClose} open={opendelete} ></PopUpCancel>
+      <PopUpCancel handleClose={handleDeleteClose} open={opendelete} data={row_data}></PopUpCancel>
 
     </ContentWrapper >
 

@@ -32,7 +32,7 @@ const PopUpDialog: React.FC<PopUpDialogProps> = ({ handleClose, open, data }) =>
           <DialogContentText sx={{ textAlign: "center" }}>
             Modifica i dati del libro.
           </DialogContentText>
-          <DialogContent sx={{ display: "flex", flexDirection: "row", }}>
+          <DialogContent sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "15rem" }}>
             <TextField id="title" name="title" label="Title" defaultValue={data[0]} />
             <TextField id="author" name="author" label="Author" defaultValue={data[1]} />
             <TextField id="genre" name="genre" label="genre" defaultValue={data[2]} />
