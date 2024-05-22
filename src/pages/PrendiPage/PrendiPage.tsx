@@ -28,7 +28,7 @@ const PrendiPage: React.FC = () => {
         <Typography sx={{ alignItems: "left", color: "white" }} variant="h1" >Prendi libro</Typography>
 
         <FormWrapper>
-          <Box component="form" sx={{ display: " flex", flexDirection: "column" }} onSubmit={handleSubmit}>
+          <Box component="form" sx={{ background: "white", display: " flex", flexDirection: "column", justifyContent: "space-between", minHeight: "7rem" }} onSubmit={handleSubmit}>
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -38,7 +38,7 @@ const PrendiPage: React.FC = () => {
               noOptionsText="No Code found"
             />
 
-            <Button type="submit">Submit</Button>
+            <Button variant="contained" type="submit">Submit</Button>
           </Box>
         </FormWrapper>
 

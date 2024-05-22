@@ -42,7 +42,7 @@ export const FormWrapper = styled('div')({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-around",
-  background: "white",
+  background: "",
 
 });
 
