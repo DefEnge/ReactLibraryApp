@@ -25,7 +25,7 @@ const PrendiPage: React.FC = () => {
     <>
       <NavBar></NavBar>
       <ContentWrapper>
-        <Typography sx={{ alignItems: "left", color: "black" }} variant="h1" >Prendi libro</Typography>
+        <Typography sx={{ alignItems: "left", color: "white" }} variant="h1" >Prendi libro</Typography>
 
         <FormWrapper>
           <Box component="form" sx={{ display: " flex", flexDirection: "column" }} onSubmit={handleSubmit}>
@@ -38,7 +38,7 @@ const PrendiPage: React.FC = () => {
               noOptionsText="No Code found"
             />
 
-            <Button type="submit">submit</Button>
+            <Button type="submit">Submit</Button>
           </Box>
         </FormWrapper>
 

@@ -42,7 +42,8 @@ export const FormWrapper = styled('div')({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-around",
-  background: "",
+  background: "white",
+
 });
 
 export const DashboardButtonWrapper = styled('div')({
