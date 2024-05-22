@@ -20,14 +20,15 @@ const PopUpUserAddDialog: React.FC<PopUpUserDialogProps> = ({ handleClose, open 
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment >
       <Dialog
         open={open}
         onClose={handleClose}
+
       >
         <DialogTitle>Add user</DialogTitle>
         <Box component="form" onSubmit={handleSubmit}>
-          <DialogContent sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }} >
+          <DialogContent sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "15rem" }} >
             <TextField id="firstname" name="firstname" label="First name" />
             <TextField id="lastname" name="lastname" label="Last name" />
             <TextField id="email" name="email" label="email" />
