@@ -31,8 +31,8 @@ const CediPage: React.FC = () => {
       <ContentWrapper>
         <Typography sx={{ alignItems: "left", color: "White" }} variant="h1" >Cedi libro</Typography>
 
-        <FormWrapper>
-          <Box component="form" sx={{ display: " flex", flexDirection: "column" }} onSubmit={handleSubmit}>
+        <FormWrapper >
+          <Box component="form" sx={{ display: " flex", flexDirection: "column", justifyContent: "space-between", background: "white", minHeight: "20rem", }} onSubmit={handleSubmit}>
             <TextField id="outlined-basic" name="title" label="Nome Libro" variant="outlined" />
             <TextField id="outlined-basic" name="author" label="Autore" variant="outlined" />
             <TextField id="outlined-basic" name="code" label="Codice" variant="outlined" />
@@ -45,7 +45,7 @@ const CediPage: React.FC = () => {
               noOptionsText={<Button component={Link} href="/utenti" >add user</Button>}
             />
 
-            <Button type="submit">submit</Button>
+            <Button variant="contained" type="submit">submit</Button>
           </Box>
         </FormWrapper>
 
