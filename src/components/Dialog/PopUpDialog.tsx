@@ -1,5 +1,6 @@
 import React from "react";
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, TextField, Box, Button } from "@mui/material";
+import { display } from "@mui/system";
 export type PopUpDialogProps = {
   handleClose: () => void;
   open: boolean;
@@ -28,10 +29,10 @@ const PopUpDialog: React.FC<PopUpDialogProps> = ({ handleClose, open, data }) =>
       >
         <DialogTitle>Modifica</DialogTitle>
         <Box component="form" onSubmit={handleSubmit}>
-          <DialogContentText align="left">
+          <DialogContentText sx={{ textAlign: "center" }}>
             Modifica i dati del libro.
           </DialogContentText>
-          <DialogContent>
+          <DialogContent sx={{ display: "flex", flexDirection: "row", }}>
             <TextField id="title" name="title" label="Title" defaultValue={data[0]} />
             <TextField id="author" name="author" label="Author" defaultValue={data[1]} />
             <TextField id="genre" name="genre" label="genre" defaultValue={data[2]} />

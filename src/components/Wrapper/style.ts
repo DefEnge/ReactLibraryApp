@@ -32,7 +32,7 @@ export const ImageDrawerWrapper = styled('div')({
 export const ContentWrapper = styled('div')({
   display: "flex",
   flexDirection: "column",
-  background: "white",
+  background: "",
   alignItems: "center",
   textAlign: "center",
 });
@@ -42,5 +42,13 @@ export const FormWrapper = styled('div')({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-around",
-  background: "",
+  background: "white",
+
 });
+
+export const DashboardButtonWrapper = styled('div')({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+})

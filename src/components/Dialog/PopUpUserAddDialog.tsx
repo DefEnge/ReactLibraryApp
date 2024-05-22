@@ -27,7 +27,7 @@ const PopUpUserAddDialog: React.FC<PopUpUserDialogProps> = ({ handleClose, open 
       >
         <DialogTitle>Add user</DialogTitle>
         <Box component="form" onSubmit={handleSubmit}>
-          <DialogContent>
+          <DialogContent sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }} >
             <TextField id="firstname" name="firstname" label="First name" />
             <TextField id="lastname" name="lastname" label="Last name" />
             <TextField id="email" name="email" label="email" />

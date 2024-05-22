@@ -29,7 +29,7 @@ const CediPage: React.FC = () => {
     <>
       <NavBar />
       <ContentWrapper>
-        <Typography sx={{ alignItems: "left", color: "black" }} variant="h1" >Cedi libro</Typography>
+        <Typography sx={{ alignItems: "left", color: "White" }} variant="h1" >Cedi libro</Typography>
 
         <FormWrapper>
           <Box component="form" sx={{ display: " flex", flexDirection: "column" }} onSubmit={handleSubmit}>

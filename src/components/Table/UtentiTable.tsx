@@ -26,8 +26,8 @@ const UtentiTable: React.FC<UtentiTableProp> = ({ data }) => {
     <>
       <ContentWrapper>
         <TableContainer>
-          <Table sx={{ minWidth: 650 }}>
-            <TableHead>
+          <Table sx={{ background: "white", minWidth: 650 }}>
+            <TableHead sx={{ background: "lightblue" }}>
               <TableRow>
                 {UserTable.map((text) => (
                   <>
