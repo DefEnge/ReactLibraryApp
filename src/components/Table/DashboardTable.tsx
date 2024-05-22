@@ -78,7 +78,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
                 <DashboardButtonWrapper>
                   <TableCell>
                     <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleClickOpen(); }} Text="Dettaglio" ></MuiButton>
-                    <MuiButton onClick={handleDeleteOpen} Text="Elimina Libro" ></MuiButton>
+                    <MuiButton onClick={() => { setRowData([book_title, author, genre]); handleDeleteOpen() }} Text="Elimina Libro" ></MuiButton>
                   </TableCell>
                 </DashboardButtonWrapper>
               </TableRow>
