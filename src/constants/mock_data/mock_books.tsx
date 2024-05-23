@@ -1,4 +1,4 @@
-[
+export let mock_book: mock_book[] = [
   {
     "book_title": "Miss Julie",
     "author": "Milty Seers",
