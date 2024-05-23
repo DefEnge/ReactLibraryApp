@@ -6,10 +6,27 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { mock_user } from "../../constants/mock_data/mock_user";
 import { mock_book } from "../../constants/mock_data/mock_books";
 import { Box } from "@mui/joy";
+import { mock_order } from "../../constants/mock_data/mock_order";
 
 type Label = { label: string };
 
 const CediPage: React.FC = () => {
+
+  const [items, setItems] = useState([]);
+  const [newItemName, setNewItemName] = useState("");
+
+  useEffect(() => {
+    setItems(mock_order);
+  }, []);
+
+  const addItem = (newItem) => {
+    setItems([...items, newItem]);
+    setNewItemName("");
+  };
+
+  const handleNewItemChange = (event) => {
+    setNewItemName(event.target.value);
+  };
 
   const outputArray: Label[] = mock_user.map(person => ({
     label: `${person.first_name} ${person.last_name}`
@@ -22,8 +39,7 @@ const CediPage: React.FC = () => {
     const data = new FormData(event.currentTarget);
     const newItem = { code: data.get('code'), book_title: data.get('books'), user: data.get('user') };
     console.log(newItem);
-    mock_book.push(newItem);
-
+    addItem(newItem);
   }
 
   return (

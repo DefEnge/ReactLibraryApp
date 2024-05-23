@@ -1,12 +1,14 @@
 export let mock_order: mock_order[] = [
   {
-    "code": "",
-    "book_title": "",
-    "user": ""
+    "code": "678-908",
+    "book_title": "Thin Ice",
+    "user": "Mariya Ruegg"
   },
   {
-    "code": "",
-    "book_title": "",
-    "user": ""
+    "code": "908-786",
+    "book_title": "Miss Julie",
+    "user": "Nariko Del Dello"
   }
-]
+];
+
+
