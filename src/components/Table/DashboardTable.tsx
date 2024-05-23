@@ -6,6 +6,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import PopUpDialog from "../Dialog/PopUpDialog";
 import PopUpCancel from "../Dialog/PopupCancel";
 import MuiButton from "../Button/Button";
+import { mock_book } from "../../constants/mock_data/mock_books";
 type MuiTableProp = {
   FirstRow: string[],
   data: {}[],
@@ -39,14 +40,13 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
 
 
 
+
   const IconSelector: React.ElementType = (taken: boolean) => {
     if (taken == true) {
       return <CloseIcon />;
-    } else {
-      return <CheckIcon />;
     }
+    return <CheckIcon />;
   };
-
   const [row_data, setRowData] = useState([]);
 
 
@@ -64,7 +64,7 @@ const DashboardTable: React.FC<MuiTableProp> = ({ FirstRow, data }) => {
             </TableRow>
           </TableHead>
           <TableBody sx={{ background: "white" }}>
-            {data.map(({ book_title, author, genre, taken }, index) => (
+            {mock_book.map(({ book_title, author, genre, taken }, index) => (
               <TableRow
                 key={book_title}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

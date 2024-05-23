@@ -1,13 +1,13 @@
 import { DashboardTable, NavBar } from "../../components";
 import { DashBoardTable } from "../../constants";
-import { default as data } from "../../constants/mock_data/mock_books.json";
+import { mock_book } from "../../constants/mock_data/mock_books";
 
 
 const DashboardPage: React.FC = () => {
   return (
     <>
       <NavBar></NavBar>
-      <DashboardTable FirstRow={DashBoardTable} data={data}></DashboardTable>
+      <DashboardTable FirstRow={DashBoardTable} data={mock_book}></DashboardTable>
 
 
     </>

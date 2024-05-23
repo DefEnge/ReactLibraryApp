@@ -1,11 +1,11 @@
 import { NavBar } from "../../components";
 import { PopUpUserAddDialog } from "../../components"
 import React, { useState } from "react";
-import { default as data } from "../../constants/mock_data/mock_user.json"
+import { mock_user } from "../../constants/mock_data/mock_user"
 import { Box, Button } from "@mui/material";
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
-const UserTable: GridColDef<(typeof data)[number]>[] = [
+const UserTable: GridColDef<(typeof mock_user)[number]>[] = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
     field: 'first_name',
@@ -44,7 +44,7 @@ const UtentiPage: React.FC = () => {
     <>
       <NavBar />
       <Box sx={{ background: "white" }}>
-        <DataGrid rows={data} columns={UserTable} initialState={{
+        <DataGrid rows={mock_user} columns={UserTable} initialState={{
           pagination: {
             paginationModel: {
               pageSize: 10,

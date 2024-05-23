@@ -1,6 +1,5 @@
 import React from "react";
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, TextField, Box, Button } from "@mui/material";
-import { display } from "@mui/system";
 export type PopUpDialogProps = {
   handleClose: () => void;
   open: boolean;

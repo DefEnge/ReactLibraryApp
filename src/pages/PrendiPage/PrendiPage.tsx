@@ -3,14 +3,14 @@ import { ContentWrapper, FormWrapper } from "../../components/Wrapper/style";
 import { Box } from "@mui/joy";
 import { Button, TextField, Typography } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
-import { default as data } from "../../constants/mock_data/mock_user.json"
+import { mock_order } from "../../constants/mock_data/mock_order"
 
 type Label = { label: string };
 
 const PrendiPage: React.FC = () => {
 
-  const outputArray: Label[] = data.map(person => ({
-    label: ` ${person.Code}`
+  const outputArray: Label[] = mock_order.map(person => ({
+    label: ` ${person.code}`
   }));
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
